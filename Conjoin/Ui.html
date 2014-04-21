@@ -165,13 +165,17 @@
 20
 21
 22
-23</pre>
+23
+24
+25</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/conjoin/ui.rb', line 3</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_panel'>panel</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span>
   <span class='id identifier rubyid_helper'>helper</span> <span class='op'>=</span> <span class='kw'>self</span>
+
+  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:header</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_delete'>delete</span> <span class='symbol'>:title</span> <span class='kw'>if</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_key?'>key?</span> <span class='symbol'>:title</span>
 
   <span class='id identifier rubyid_mab'>mab</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_div'>div</span> <span class='label'>class:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>panel panel-default</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>id:</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='kw'>do</span>
@@ -201,7 +205,7 @@
 </div>
 
     <div id="footer">
-  Generated on Fri Apr 18 14:10:42 2014 by
+  Generated on Mon Apr 21 00:20:50 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.0.0).
 </div>
